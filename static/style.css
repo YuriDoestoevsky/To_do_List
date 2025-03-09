@@ -1,0 +1,130 @@
+/* Default Theme */
+body {
+    background-color: #f1f5f9; 
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #ffffff; 
+    border-radius: 8px;
+}
+
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f2f2;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+li label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+li input[type="checkbox"] {
+    cursor: pointer;
+}
+
+li span {
+    color: #333;
+}
+
+li input[type="submit"] {
+    background-color: #415a77;
+    color: #e0e1dd;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+li input[type="submit"]:hover {
+    background-color: #344e6c;
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background-color: #121212; 
+    color: #e0e1dd; 
+}
+
+body.dark-theme .container {
+    background-color: #1e1e1e; 
+    border: 1px solid #333;
+}
+
+body.dark-theme h1 {
+    color: #ff9f1c;
+}
+
+body.dark-theme input[type="text"] {
+    background-color: #444; 
+    color: #e0e1dd;
+    border: 1px solid #555;
+}
+
+body.dark-theme input[type="submit"] {
+    background-color: #ff9f1c;
+    color: #121212;
+}
+
+body.dark-theme input[type="submit"]:hover {
+    background-color: #e08e17; 
+}
+
+body.dark-theme li{
+    background-color:#d49e4b;
+}
+
+.theme-switcher {
+    display: flex;
+    gap: 10px;
+}
+
+.theme-switcher button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.theme-switcher button:hover {
+    color: #ff9f1c; 
+}
+
+body.dark-theme .theme-switcher button {
+    color: #e0e1dd;
+}
+
+
+
+@media (max-width: 600px) {
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    input[type="submit"], input[type="text"] {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 5px 0; 
+    }
+
+    form {
+        width: 100%;
+    }
+}
